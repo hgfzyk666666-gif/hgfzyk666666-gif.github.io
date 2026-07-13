@@ -77,13 +77,61 @@
     border: 0.5px solid #d3d1c7;
   }
   .tag.lang { background: #e6f1fb; color: #185fa5; border-color: #b5d4f4; }
-  .card-links { display: flex; gap: 10px; }
-  .card-links a {
-    font-size: 13px; color: #534ab7; text-decoration: none;
-    border-bottom: 1px solid transparent; transition: border-color 0.2s;
+  .card-actions { display: flex; flex-direction: column; gap: 8px; }
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 0.5px solid #d3d1c7;
+    transition: all 0.15s;
+    cursor: pointer;
   }
-  .card-links a:hover { border-color: #7f77dd; }
+  .btn-primary {
+    background: #534ab7; color: #fff; border-color: #534ab7;
+  }
+  .btn-primary:hover { background: #3c3489; border-color: #3c3489; }
+  .btn-secondary {
+    background: #fff; color: #534ab7; border-color: #b5b1e0;
+  }
+  .btn-secondary:hover { background: #eeedfe; }
+  .btn-github {
+    background: #2c2c2a; color: #fff; border-color: #2c2c2a;
+    font-size: 12px; padding: 5px 10px;
+  }
+  .btn-github:hover { background: #000; }
   .star { color: #ba7517; font-size: 12px; margin-left: auto; }
+
+  /* 预览弹窗 */
+  .preview-modal {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    padding: 5vh 5vw;
+  }
+  .preview-modal.open { display: flex; flex-direction: column; }
+  .preview-bar {
+    display: flex; align-items: center; gap: 10px;
+    background: #2c2c2a; color: #fff;
+    padding: 10px 16px; border-radius: 12px 12px 0 0;
+    font-size: 13px;
+  }
+  .preview-bar .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .preview-bar .dot.r { background: #ff5f57; }
+  .preview-bar .dot.y { background: #febc2e; }
+  .preview-bar .dot.g { background: #28c840; }
+  .preview-bar .url { color: #b4b2a9; font-size: 12px; flex-grow: 1; margin-left: 8px; }
+  .preview-bar .close {
+    background: transparent; border: 0; color: #fff;
+    font-size: 20px; cursor: pointer; line-height: 1;
+  }
+  .preview-frame {
+    flex-grow: 1; background: #fff; border-radius: 0 0 12px 12px;
+    border: 0; width: 100%;
+  }
   footer {
     text-align: center; padding: 32px 20px;
     font-size: 12px; color: #888780; border-top: 0.5px solid #d3d1c7;
@@ -113,14 +161,20 @@
         </div>
         <span class="star">★ 0</span>
       </div>
-      <p class="card-desc">晨间翻开书，选今日幸运色与数字，读到一句不鸡汤、有温度的鼓励；夜写日记，合上入睡。书 365 页对应一年，每日推进、不重复。愿它成为你"半径之内、伸手可及"的温柔。</p>
+      <p class="card-desc">晨间翻开书，选今日幸运色与数字，读到一句不鸡汤、有温度的鼓励；夜写日记，合上入睡。书 365 页对应一年，每日推进、不重复。</p>
       <div class="card-tags">
         <span class="tag lang">Web</span>
         <span class="tag">疗愈</span>
         <span class="tag">小程序</span>
       </div>
-      <div class="card-links">
-        <a href="https://github.com/hgfzyk666666-gif/-zhaoshu-xiji" target="_blank">GitHub</a>
+      <div class="card-actions">
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://github.com/hgfzyk666666-gif/-zhaoshu-xiji" target="_blank">查看详情</a>
+          <a class="btn btn-secondary" href="https://github.com/hgfzyk666666-gif/-zhaoshu-xiji/blob/main/README.md" target="_blank">项目说明</a>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-github" href="https://github.com/hgfzyk666666-gif/-zhaoshu-xiji" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -139,9 +193,14 @@
         <span class="tag">Replit</span>
         <span class="tag">AI 助手</span>
       </div>
-      <div class="card-links">
-        <a href="https://github.com/hgfzyk666666-gif/Zhi-Neng-Zhu-Shou" target="_blank">GitHub</a>
-        <a href="https://replit.com/@hgfzyk666666/Zhi-Neng-Zhu-Shou" target="_blank">Replit Demo</a>
+      <div class="card-actions">
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://replit.com/@hgfzyk666666/Zhi-Neng-Zhu-Shou" target="_blank">在线试用</a>
+          <a class="btn btn-secondary" href="javascript:void(0)" onclick="openPreview('https://replit.com/@hgfzyk666666/Zhi-Neng-Zhu-Shou','智能助手 - Replit')">弹窗预览</a>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-github" href="https://github.com/hgfzyk666666-gif/Zhi-Neng-Zhu-Shou" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -160,17 +219,44 @@
         <span class="tag">Android</span>
         <span class="tag">APK</span>
       </div>
-      <div class="card-links">
-        <a href="https://github.com/hgfzyk666666-gif/-" target="_blank">GitHub</a>
+      <div class="card-actions">
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://github.com/hgfzyk666666-gif/-/releases" target="_blank">下载 APK</a>
+          <a class="btn btn-secondary" href="https://github.com/hgfzyk666666-gif/-" target="_blank">详细介绍</a>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-github" href="https://github.com/hgfzyk666666-gif/-" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
+<div class="preview-modal" id="previewModal" onclick="if(event.target.id==='previewModal')closePreview()">
+  <div class="preview-bar">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="url" id="previewUrl">about:blank</span>
+    <button class="close" onclick="closePreview()">×</button>
+  </div>
+  <iframe id="previewFrame" class="preview-frame" src="about:blank"></iframe>
+</div>
+
 <footer>
-  Hosted on <a href="https://github.com/hgfzyk666666-gif" target="_blank">GitHub</a>  via Pages
+  Hosted on <a href="https://github.com/hgfzyk666666-gif" target="_blank">GitHub</a> via Pages
 </footer>
+
+<script>
+  function openPreview(url, title) {
+    document.getElementById('previewFrame').src = url;
+    document.getElementById('previewUrl').textContent = title;
+    document.getElementById('previewModal').classList.add('open');
+  }
+  function closePreview() {
+    document.getElementById('previewModal').classList.remove('open');
+    document.getElementById('previewFrame').src = 'about:blank';
+  }
+</script>
 
 </body>
 </html>
