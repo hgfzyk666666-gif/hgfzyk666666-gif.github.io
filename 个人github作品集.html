@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minister.F - 作品集</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f9f7f4;
+    color: #2c2c2a;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .hero {
+    text-align: center;
+    padding: 64px 20px 40px;
+  }
+  .hero img {
+    width: 80px; height: 80px; border-radius: 50%;
+    border: 3px solid #d3d1c7;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 24px; font-weight: 500; color: #26215c; margin-bottom: 6px; }
+  .hero .tagline { font-size: 14px; color: #888780; }
+  .projects {
+    max-width: 960px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+  .section-title {
+    font-size: 16px; font-weight: 500; color: #444441;
+    margin-bottom: 20px; padding-left: 4px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    border: 0.5px solid #d3d1c7;
+    padding: 24px;
+    transition: border-color 0.2s, transform 0.15s;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    border-color: #7f77dd;
+    transform: translateY(-2px);
+  }
+  .card-header {
+    display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;
+  }
+  .card-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .card-icon.kotlin { background: #e6f1fb; color: #378add; }
+  .card-icon.ts { background: #e1f5f0; color: #1d9e75; }
+  .card-icon.web { background: #eeedfe; color: #7f77dd; }
+  .card-name { font-size: 15px; font-weight: 500; color: #2c2c2a; margin-bottom: 2px; }
+  .card-repo { font-size: 12px; color: #888780; }
+  .card-desc {
+    font-size: 13px; color: #5f5e5a; line-height: 1.7;
+    flex-grow: 1; margin-bottom: 16px;
+  }
+  .card-tags {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
+  }
+  .tag {
+    font-size: 11px; padding: 3px 10px; border-radius: 20px;
+    background: #f1efe8; color: #5f5e5a;
+    border: 0.5px solid #d3d1c7;
+  }
+  .tag.lang { background: #e6f1fb; color: #185fa5; border-color: #b5d4f4; }
+  .card-links { display: flex; gap: 10px; }
+  .card-links a {
+    font-size: 13px; color: #534ab7; text-decoration: none;
+    border-bottom: 1px solid transparent; transition: border-color 0.2s;
+  }
+  .card-links a:hover { border-color: #7f77dd; }
+  .star { color: #ba7517; font-size: 12px; margin-left: auto; }
+  footer {
+    text-align: center; padding: 32px 20px;
+    font-size: 12px; color: #888780; border-top: 0.5px solid #d3d1c7;
+    max-width: 960px; margin: 0 auto;
+  }
+  footer a { color: #534ab7; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img src="https://avatars.githubusercontent.com/u/289587824?v=4" alt="头像">
+  <h1>Minister.F</h1>
+  <p class="tagline">A college student that is thrilled for something new</p>
+</section>
+
+<section class="projects">
+  <p class="section-title">项目</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon web">📖</div>
+        <div>
+          <div class="card-name">zhaoshu xiji</div>
+          <div class="card-repo">-zhaoshu-xiji</div>
+        </div>
+        <span class="star">★ 0</span>
+      </div>
+      <p class="card-desc">晨间翻开书，选今日幸运色与数字，读到一句不鸡汤、有温度的鼓励；夜写日记，合上入睡。书 365 页对应一年，每日推进、不重复。愿它成为你"半径之内、伸手可及"的温柔。</p>
+      <div class="card-tags">
+        <span class="tag lang">Web</span>
+        <span class="tag">疗愈</span>
+        <span class="tag">小程序</span>
+      </div>
+      <div class="card-links">
+        <a href="https://github.com/hgfzyk666666-gif/-zhaoshu-xiji" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon ts">🤖</div>
+        <div>
+          <div class="card-name">智能助手</div>
+          <div class="card-repo">Zhi-Neng-Zhu-Shou</div>
+        </div>
+        <span class="star">★ 0</span>
+      </div>
+      <p class="card-desc">基于 TypeScript 构建的智能助手应用，在 Replit 上实时运行。集成了多样工具能力，一个灵活的数字帮手。</p>
+      <div class="card-tags">
+        <span class="tag lang">TypeScript</span>
+        <span class="tag">Replit</span>
+        <span class="tag">AI 助手</span>
+      </div>
+      <div class="card-links">
+        <a href="https://github.com/hgfzyk666666-gif/Zhi-Neng-Zhu-Shou" target="_blank">GitHub</a>
+        <a href="https://replit.com/@hgfzyk666666/Zhi-Neng-Zhu-Shou" target="_blank">Replit Demo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon kotlin">📱</div>
+        <div>
+          <div class="card-name">记账 App</div>
+          <div class="card-repo">-</div>
+        </div>
+        <span class="star">★ 1</span>
+      </div>
+      <p class="card-desc">用 Kotlin + AI Studio 打造的安卓记账应用，可安装 APK 到手机。帮你记录日常收支，界面简洁，上手即用。</p>
+      <div class="card-tags">
+        <span class="tag lang">Kotlin</span>
+        <span class="tag">Android</span>
+        <span class="tag">APK</span>
+      </div>
+      <div class="card-links">
+        <a href="https://github.com/hgfzyk666666-gif/-" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  Hosted on <a href="https://github.com/hgfzyk666666-gif" target="_blank">GitHub</a>  via Pages
+</footer>
+
+</body>
+</html>
