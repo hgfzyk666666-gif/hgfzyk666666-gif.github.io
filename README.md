@@ -12,13 +12,13 @@
 - 类型：Web 小程序
 - 简介：晨间翻开书选今日幸运色与数字，夜写日记合上入睡；书 365 页对应一年，每日推进不重复。
 
-### 🤖 智能助手 Zhi-Neng-Zhu-Shou
+### 🤖 我的个人网站v1.1 Zhi-Neng-Zhu-Shou
 - 仓库：<https://github.com/hgfzyk666666-gif/Zhi-Neng-Zhu-Shou>
 - 在线演示：<https://replit.com/@hgfzyk666666/Zhi-Neng-Zhu-Shou>
 - 类型：TypeScript 应用
 - 简介：基于 TypeScript 构建的智能助手，集成多样工具能力。
 
-### 📱 记账 App
+### 📱 记账 App《果凡记账》
 - 仓库：<https://github.com/hgfzyk666666-gif/->
 - 类型：Kotlin Android APK
 - 简介：用 Kotlin + AI Studio 打造的安卓记账应用，可下载 APK 安装到手机。
