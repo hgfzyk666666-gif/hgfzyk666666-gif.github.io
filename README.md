@@ -7,7 +7,7 @@
 
 ## 包含的项目
 
-### 📖 zhaoshu xiji（手边的温柔）
+### 📖 zhaoshu xiji（朝书夕记）
 - 仓库：<https://github.com/hgfzyk666666-gif/-zhaoshu-xiji>
 - 类型：Web 小程序
 - 简介：晨间翻开书选今日幸运色与数字，夜写日记合上入睡；书 365 页对应一年，每日推进不重复。
